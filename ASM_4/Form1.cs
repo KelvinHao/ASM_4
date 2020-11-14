@@ -33,12 +33,16 @@ namespace ASM_4
                 if (em.EmpRole == false)
                 {
                     frmChangeAccount change = new frmChangeAccount(em);
+                    this.Hide();
                     change.ShowDialog();
+                    this.Show();
                 }
                 else
                 {
                     frmMaintainBook main = new frmMaintainBook();
+                    this.Hide();
                     main.ShowDialog();
+                    this.Show();
                 }
             }
         }

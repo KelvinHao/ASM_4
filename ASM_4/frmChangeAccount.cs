@@ -13,12 +13,13 @@ namespace ASM_4
 {
     public partial class frmChangeAccount : Form
     {
+
         public Employee EmployeeAccount { get; set; }
         public frmChangeAccount()
         {
             InitializeComponent();
         }
-        public frmChangeAccount(Employee e):this()
+        public frmChangeAccount(Employee e) : this()
         {
             EmployeeAccount = e;
             InitData();
@@ -47,7 +48,7 @@ namespace ASM_4
             flag = edb.UpdateEmployeePassword(EmployeeAccount);
 
             //xuat thong bao
-            if (flag == true)
+            if (flag == true && !txtEmpPass.Text.Equals(""))
             {
                 MessageBox.Show("Change successful!");
             }
